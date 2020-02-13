@@ -7,4 +7,4 @@ class Room:
         self.description = description
 
     def __str__(self):
-        return "Room..."
+        return f"{self.name} in {self.description} room"
