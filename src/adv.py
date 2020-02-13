@@ -46,11 +46,11 @@ print(player)
 
 nextstep = 0
 while nextstep != len(room) + 1:
-    print('current player room: ', player1.room)
+    print('current player room: ', player.player_room)
     nextstep = input("pick a new room: ")
     try:
         if nextstep in room:
-            player1.room = nextstep
+            player.player_room = nextstep
         else:
             nextstep = input("wrong room enytered! pick a valid new room: ")
     except:
