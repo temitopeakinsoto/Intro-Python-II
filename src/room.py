@@ -3,8 +3,8 @@
 
 class Room:
     def __init__(self, room_name, description):
-        self.name = name
+        self.room_name = room_name
         self.description = description
 
     def __str__(self):
-        return f"{self.name} in {self.description} room"
+        return f"{self.room_name} in {self.description} room"
