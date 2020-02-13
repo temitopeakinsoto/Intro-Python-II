@@ -43,6 +43,19 @@ player = Player(room['outside'])
 print(player)
 
 # Write a loop that:
+
+nextstep = 0
+while nextstep != len(room) + 1:
+    print('current player room: ', player1.room)
+    nextstep = input("pick a new room: ")
+    try:
+        if nextstep in room:
+            player1.room = nextstep
+        else:
+            nextstep = input("wrong room enytered! pick a valid new room: ")
+    except:
+        print('pick a valid room name')
+
 #
 # * Prints the current room name
 # * Prints the current description (the textwrap module might be useful here).
