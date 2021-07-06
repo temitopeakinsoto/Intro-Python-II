@@ -1,4 +1,5 @@
 from room import Room
+from player import Player
 
 # Declare all the rooms
 
@@ -38,8 +39,23 @@ room['treasure'].s_to = room['narrow']
 #
 
 # Make a new player object that is currently in the 'outside' room.
+player = Player(room['outside'])
+print(player)
 
 # Write a loop that:
+
+nextstep = 0
+while nextstep != len(room) + 1:
+    print('current player room: ', player.player_room)
+    nextstep = input("pick a new room: ")
+    try:
+        if nextstep in room:
+            player.player_room = nextstep
+        else:
+            nextstep = input("wrong room enytered! pick a valid new room: ")
+    except:
+        print('pick a valid room name')
+
 #
 # * Prints the current room name
 # * Prints the current description (the textwrap module might be useful here).
